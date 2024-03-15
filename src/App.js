@@ -101,6 +101,17 @@ const App = () => {
         <h1 className="App-title">ReactND - Coding Practice</h1>
       </header>
       <h2>Favorite Movies</h2>
+      <ol>
+        {profiles.map((profile) => {
+          let userId = profile.userID;
+          let name = users[userId].name;
+          let favMovieId = profile.favoriteMovieID;
+          let favMovie = movies[favMovieId].name;
+          let str = name + "'s  favorite movie is " + favMovie;
+
+          return <li>{str}</li>;
+        })}
+      </ol>
     </div>
   );
 };
