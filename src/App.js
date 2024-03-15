@@ -109,7 +109,7 @@ const App = () => {
           let favMovie = movies[favMovieId].name;
           let str = name + "'s  favorite movie is " + favMovie;
 
-          return <li>{str}</li>;
+          return <li key={profile.id}>{str}</li>;
         })}
       </ol>
     </div>
